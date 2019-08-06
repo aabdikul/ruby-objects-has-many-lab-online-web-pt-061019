@@ -7,7 +7,7 @@ class Song
   def initialize(name)
     @name = name
     @@all << self
-    @artist = nil
+    #@artist = nil
   end
 
   def artist_name
@@ -20,6 +20,12 @@ class Song
 
   def self.all
     @@all
+  end
+
+  def self.print_all
+    self.all.each do |song| #context of self is the class
+      puts song.name
+    end
   end
 
 end
